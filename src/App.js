@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Author: Zeeshan  Ahmad
+ * @Date:   2020-11-01 11:53:02
+ * @Last Modified by:   Zeeshan  Ahmad
+ * @Last Modified time: 2020-11-08 12:33:59
+ */
+import React from "react";
+import Welcome from './Welcome';
+import studentData from "./StudentData";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+  return studentData.map((item)=>
+  <Welcome
+  name={item.name}
+  address={item.address}
+  />
+  ) 
 }
 
 export default App;
+  
+   
